@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        legend {
+            background-color: gray;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        .div1 {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #efefa6;
+            border-radius: 25px;
+            margin: 50px;
+        }
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+        .inputfile + .filelbackground {
+            background-color: red;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #fafad2;">
+    <div class="div1">
+        <h1 style="text-align: center;">Application for Permission To Date My Daughter</h1>
+        <p><b>Note:</b>Form is to be compleated at least 21 days prior to date</p>
+        <form action="" id="form1">
+            <fieldset>
+                <legend>Personal Details:</legend>
+                <label for="">Name:</label>
+                <input required type="text" name="fullname" placeholder="Enter name here.."><br><br>
+                <label for="">Address:</label>
+                <input type="text" placeholder="Enter address here.."><br><br>
+                <label for="">Email</label>
+                <input type="email" placeholder="Enter email here.."><br><br>
+                <label for="">Phone Number:</label>
+                <input type="number" placeholder="Enter 10 digit here.."><br><br>
+                <label for="">IQ:</label>
+                <input type="phone" placeholder="Enter IQ here.."><br><br>
+                <label>Gender</label><br><br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label><br><br>
+                <label for="birthday">Date of proposed outing:</label>
+                <input type="date" id="birthday" name="birthday"><br><br>
+            </fieldset><br>
+
+            <fieldset>
+                <p>Check all that apply</p>
+                <input type="checkbox" name="vehicle1">
+                <label> I have tattoos and/or piercings</label><br>
+                <input type="checkbox" name="vehicle1">
+                <label> I am more than 2 years older than my daughter</label><br>
+                <input type="checkbox" name="vehicle1">
+                <label> I own a panel van or V8 ute</label><br>
+                <input type="checkbox" name="vehicle1">
+                <label> I work full-time</label><br>
+                <input type="checkbox" name="vehicle1">
+                <label> My parents are rich</label><br>
+                <input type="checkbox" name="vehicle1">
+                <label> Is the date at well lit public location</label><br>
+            </fieldset><br>
+
+            <fieldset>
+                Political Persuasion: <select>
+                    <option value="LeftWing">Left Wing</option>
+                    <option value="RightWing">Right Wing</option>
+                </select>
+                Education Level Compleated: <select>
+                    <option value="University">University</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="HighSchool">High School</option>
+                    <option value="PrimarySchool">Primary School</option>
+                </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Essay Section</legend>
+                <label for="">In 50 words or more explain why you want to date my daughter</label><br><br>
+                <textarea name="essay" rows="7" cols="90" placeholder="Enter Text here"></textarea><br><br>
+                <label for="">Please upload contact details for 2 references</label><br>
+                <textarea name="essay" rows="7" cols="90" placeholder="Enter Text here"></textarea><br><br>
+                <label> Upload Police Clearance Certificate, Bank Statement and Medical Certificate here:</label>
+                <input type="file" name="file" id="file" class="inputfile" multiple required></input>
+                <label for="file" class="filelbackground">Attach Files</label>
+            </fieldset>
+            <br>
+            <br>
+            <div style="text-align:center">
+                <button type="submit" style="background-color: red; border: none; color: white; padding: 5px; cursor: pointer;">Send Your Application</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+jQuery(document).ready(function() {
+    jQuery("#forms).validate({
+       rules: {
+          fullname: 'required'
+       }
+    });
+ });
+ 
+$(document).ready(function() {
+   $("#form").validate();
+});
+</script>
+</html>

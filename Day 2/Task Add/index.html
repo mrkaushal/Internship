@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>To DO List</title>
+</head>
+
+<body style="background-color: #ebeff0">
+    <div class="container">
+
+        <h3 style="text-align: center;">Add Task</h3>
+        <br>
+        <label>Task</label>
+        <input id="new-task" type="text" required><br>
+
+        <label style="padding-right: 05px;">Name</label>
+        <input id="new-name" type="text" required><br>
+
+        <label>Phone Number</label>
+        <input id="new-number" type="text" required><br>
+        <button id="AddBtn" onclick="addTask()">Add Task</button>
+
+        <h3 style="text-align: center;">Todo</h3>
+        
+        <ul id="incomplete-tasks">
+            
+        </ul>
+
+        <h3 style="text-align: center;">Completed Tasks</h3>
+        <ul id="completed-tasks">
+            
+        </ul>
+
+    </div>
+</body>
+<script type="text/javascript" src="main.js"></script>
+</html>

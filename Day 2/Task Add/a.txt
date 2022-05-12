@@ -1,0 +1,35 @@
+var addTaskToLocalStorage = function () {
+    var task = taskInput.value;
+    if (task) {
+        var taskList = localStorage.getItem("taskList");
+        if (taskList) {
+            taskList = JSON.parse(taskList);
+            taskList.push(task);
+            localStorage.setItem("taskList", JSON.stringify(taskList));
+        }
+        else {
+            var taskList = [];
+            taskList.push(task);
+            localStorage.setItem("taskList", JSON.stringify(taskList));
+        }
+        taskInput.value = "";
+    }
+}
+
+
+
+var showTasks = function () {
+    var taskList = localStorage.getItem("taskList");
+    if (taskList) {
+        taskList = JSON.parse(taskList);
+        taskList.forEach(function (task) {
+            var listItem = document.createElement("li");
+            listItem.innerHTML = task;
+            var checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            listItem.appendChild(checkbox);
+            incompleteTask.appendChild(listItem);
+        }
+        );
+    }
+}
