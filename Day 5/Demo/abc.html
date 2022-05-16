@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 may</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        table {
+            margin: 25px 0;
+            width: 200px;
+        }
+
+        table th,
+        table td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="add-row">add-row</button>
+    <table>
+        <thead>
+            <th>No.</th>
+            <th>rows</th>
+        </thead>
+        <tbody id="body">
+            
+        </tbody>
+    </table>
+    
+    <script>
+        
+        $(document).ready(function () {
+            let lineno = 1;
+            $(".add-row").click(function () {
+                $("tbody").append("<tr><td>" +lineno+ "</td><td>This is row " + lineno + "</td></tr>");
+                lineno++;
+            });
+        }); 
+    </script>
+
+</body>
+
+</html>
