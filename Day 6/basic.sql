@@ -1,1 +1,0 @@
-CREATE TABLE Customer(id Number(5), name varchar(10));
