@@ -19,7 +19,7 @@ $(document).ready(function(){
                 </span>
                 </td>
                 <td>
-                    <a href="${file}" download><button class='btn-download btn btn-warning' >Download</button></a>
+                    <button class='btn-download btn btn-warning' >Download</button>
                     <button class='btn-delete btn btn-danger'>Delete</button>
                 </td>
             </tr>`);
@@ -33,6 +33,10 @@ $(document).ready(function(){
         } else {
             alert("Please fill all the fields");
         }
+    });
+
+    $("tbody").on("click", ".btn-download", function () {
+        window.location.href = "C:\\Users\\Kaushal\\OneDrive\\Pictures\\facebook-cover-01.png";
     });
 
     $("tbody").on("click", ".btn-delete", function () {
