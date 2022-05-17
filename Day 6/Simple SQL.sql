@@ -95,6 +95,7 @@ Select * from Worker where FIRST_NAME like '_____h';
 Q19
 Select * from Worker where SALARY between 100000 and 500000;
 Q20
+Select * from Worker where year(JOINING_DATE) = 2014 and month(JOINING_DATE) = 2;
 Q21
 SELECT COUNT(*) FROM worker WHERE DEPARTMENT = 'Admin';
 Q22
